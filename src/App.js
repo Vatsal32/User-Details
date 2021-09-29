@@ -84,7 +84,7 @@ function App() {
             });
         }
         resolve();
-        // window.location.reload();
+        window.location.reload();
     };
 
     const handleRowAdd = async (newData, resolve) => {
