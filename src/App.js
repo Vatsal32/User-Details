@@ -20,6 +20,7 @@ function App() {
                         website: user.website
                     };
                 });
+				console.log(users[10]);
                 setData(users);
             });
     }, []);
@@ -83,7 +84,7 @@ function App() {
             });
         }
         resolve();
-        window.location.reload();
+        // window.location.reload();
     };
 
     const handleRowAdd = async (newData, resolve) => {
