@@ -8,8 +8,6 @@ function App() {
 
     useEffect(() => {
         let users;
-		console.log(`${process.env.REACT_APP_API_URL}`);
-
         fetch(`${process.env.REACT_APP_API_URL}users`)
             .then(res => res.json())
             .then(res => {
@@ -60,7 +58,7 @@ function App() {
         } else {
 
             await fetch(
-                `http://localhost:3000/users/${oldData.tableData.id}`,
+				`${process.env.REACT_APP_API_URL}users/${oldData.tableData.id}`,
                 {
                     headers: {'Content-Type': 'application/json'},
                     method: 'PUT',
@@ -94,7 +92,7 @@ function App() {
         if (errors.length > 0) {
             alert(errors[0]);
         } else {
-            await fetch('http://localhost:3000/users', {
+            await fetch(`${process.env.REACT_APP_API_URL}users`, {
                 headers: {'Content-Type': 'application/json'},
                 method: 'POST',
                 body: JSON.stringify({
@@ -111,7 +109,7 @@ function App() {
     };
 
     const handleRowDelete = async (oldData, resolve) => {
-        await fetch(`http://localhost:3000/users/${oldData.tableData.id}`, {
+        await fetch(`${process.env.REACT_APP_API_URL}users/${oldData.tableData.id}`, {
             method: 'DELETE',
         }).then(res => res.json()).then();
         setData(prevData => {
