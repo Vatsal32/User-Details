@@ -26,4 +26,4 @@ This project makes use of JSON Placeholder Fake DB, where data cannot be edited 
     npm start
     ```
 
-Alternatively, you can also visit the hosted web site at https://userdetails12.herokuapp.com/. But this site uses JSON place holder hence editing the records won't be possible.
+Alternatively, you can also visit the hosted website at https://userdetails12.herokuapp.com/. But this site uses JSON place holder hence editing the records won't be possible.
